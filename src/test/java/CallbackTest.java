@@ -6,20 +6,28 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CallbackTest {
-    private WebDriver driver;
+    private static WebDriver driver;
 
     @BeforeAll
     static void setupAll() {
         WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
+
     }
 
     @BeforeEach
     void setup() {
         driver = new ChromeDriver();
+
     }
 
     @AfterEach

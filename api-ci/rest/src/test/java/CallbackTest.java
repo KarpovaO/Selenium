@@ -24,6 +24,8 @@ class CallbackTest {
         options.addArguments("--no-sandbox"); // Bypass OS security model
         options.setExperimentalOption("useAutomationExtension", false);
         options.addArguments("--remote-debugging-port=9222");
+        options.addArguments("--user-data-dir=~/.config/google-chrome");
+        options.addArguments("--profile-directory=Default");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
     }

@@ -16,7 +16,9 @@ build_script:
   - sh: uname -a
   #- sh: sudo apt install -y chromium-browser
   - sh: sudo snap install chromium
-  - sh: ls /usr/bin
+  #- sh: ls /usr/bin
+  - sh: ls -l /usr/bin/google-chrome
+  - sh: ls -l /usr/bin/google-chrome-stable
   #- sh: sudo snap refresh chromium
   - sh: cd ./api-ci/rest	# переходим в директорию ./api-ci/rest
   - sh: echo "$PWD"

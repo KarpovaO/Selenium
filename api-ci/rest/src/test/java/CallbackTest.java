@@ -25,7 +25,8 @@ class CallbackTest {
         options.addArguments("--no-sandbox"); // Bypass OS security model
         //options.setExperimentalOption("useAutomationExtension", false);
         //options.addArguments("--remote-debugging-port=9222");
-        options.setBinary(new File("/usr/bin/google-chrome-stable"));
+        //options.setBinary(new File("/usr/bin/google-chrome-stable"));
+        options.setBinary(new File("/usr/bin/google-chrome"));
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
     }

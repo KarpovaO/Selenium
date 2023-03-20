@@ -13,6 +13,7 @@ install:
   - java -jar ./artifacts/app-order.jar &
 
 build_script:
+  - sh: cd ./api-ci/rest	# переходим в директорию ./api-ci/rest
   - sh: echo "$PWD"
   - sh: chmod +x gradlew
   - sh: ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации

@@ -16,9 +16,7 @@ build_script:
   - sh: uname -a
   #- sh: sudo apt install -y chromium-browser
   - sh: sudo snap install chromium
-  #- sh: sudo locate chrome
-  - sh: sudo locate chromium
-  - sh: sudo snap refresh chromium
+  #- sh: sudo snap refresh chromium
   - sh: cd ./api-ci/rest	# переходим в директорию ./api-ci/rest
   - sh: echo "$PWD"
   - sh: chmod +x gradlew

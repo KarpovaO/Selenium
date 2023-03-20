@@ -23,6 +23,7 @@ class CallbackTest {
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox"); // Bypass OS security model
         options.setExperimentalOption("useAutomationExtension", false);
+        options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
     }

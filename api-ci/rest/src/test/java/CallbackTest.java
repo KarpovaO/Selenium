@@ -39,7 +39,7 @@ class CallbackTest {
     }
 
     @Test
-    void shouldTestSomething() throws InterruptedException {
+    void shouldTestSomething() {
         driver.get("http://localhost:9999");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Оля");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79163089114");

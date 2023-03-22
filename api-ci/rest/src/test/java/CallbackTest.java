@@ -41,7 +41,6 @@ class CallbackTest {
     @Test
     void shouldTestSomething() throws InterruptedException {
         driver.get("http://localhost:9999");
-        Thread.sleep(2000);
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Оля");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79163089114");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
